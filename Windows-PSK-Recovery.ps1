@@ -12,3 +12,10 @@ $results = foreach ($name in $profiles) {
 }
 
 $results | Format-Table -AutoSize
+
+# Comment out above and uncomment below for Text File
+# $results | Format-Table -AutoSize | Out-File "$env:USERPROFILE\Desktop\WiFi_Passwords.txt"
+# Write-Host "Passwords saved to Desktop\WiFi_Passwords.txt" -ForegroundColor Green
+
+# Comment out above and uncomment below for CSV
+#$results | Export-Csv -Path "$env:USERPROFILE\Desktop\WiFi_Passwords.csv" -NoTypeInformation
